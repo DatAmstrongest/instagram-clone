@@ -14,21 +14,29 @@ class LinkBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        style: TextStyle(color: AppColors.inputColor),
-        text: descriptionText,
-        children: <TextSpan>[
-          TextSpan(
-            text: "  $linkText",
-            style: TextStyle(color: AppColors.linkColor),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.pushNamed(context, linkRoute);
-              },
+    return Column(
+      children: [
+        Divider(color: AppColors.dividerColor),
+        SizedBox(
+          height: 15,
+        ),
+        RichText(
+          text: TextSpan(
+            style: TextStyle(color: AppColors.inputColor),
+            text: descriptionText,
+            children: <TextSpan>[
+              TextSpan(
+                text: "  $linkText",
+                style: TextStyle(color: AppColors.linkColor),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.pushNamed(context, linkRoute);
+                  },
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

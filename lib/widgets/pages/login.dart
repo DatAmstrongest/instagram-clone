@@ -18,7 +18,7 @@ class Login extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20, top: 150),
             child: Text(
               "Instagram",
-              style: Fonts.titleFont,
+              style: Fonts.instagramFont,
             ),
           ),
           SizedBox(height: 30),
@@ -82,13 +82,7 @@ class Login extends StatelessWidget {
             ),
             onPressed: () {},
           ),
-          SizedBox(
-            height: 50,
-          ),
-          Divider(color: AppColors.dividerColor),
-          SizedBox(
-            height: 15,
-          ),
+          Spacer(),
           LinkBottom(
               descriptionText: "Don't have an account?",
               linkText: "Sign up",
